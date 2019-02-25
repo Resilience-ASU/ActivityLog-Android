@@ -1,0 +1,59 @@
+{
+  "logs": [
+    {
+      "title": "Indoor - Restaurant",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    },
+
+    {
+      "title": "Outdoor - Other",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    },
+
+    {
+      "title": "Indoor - Work",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    },
+
+    {
+      "title": "Indoor - Home",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    },
+
+    {
+      "title": "Outdoor - Other",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    },
+
+    {
+      "title": "Outdoor - Shopping",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    },
+
+    {
+      "title": "Outdoor - Transit",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    },
+
+    {
+      "title": "Indoor - Restaurant",
+      "time" : "12:00pm 2018-08-09",
+      "lat" : 90.788,
+      "lon" : 33.12
+    }
+  ]
+}
