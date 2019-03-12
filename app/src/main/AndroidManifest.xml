@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustPan|adjustResize">
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -39,6 +40,7 @@
         <receiver android:name=".AlarmReceiver" />
         <service android:name=".MyService" android:process=":my_service" />
         <service android:name=".BluetoothLeService" android:enabled="true"/>
+
     </application>
 
 </manifest>
