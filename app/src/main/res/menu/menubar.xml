@@ -15,5 +15,12 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_icon_white_24"
         android:title="CheckMyID"/>
+    <!--Added by Laveena Sachdeva to support Heat History Component. Was changed  to just appear in the Heat Fragment if this is successfully implemented-->
+    <!--<item-->
+        <!--android:id="@+id/heat_history"-->
+        <!--android:orderInCategory="100"-->
+        <!--app:showAsAction="always"-->
+        <!--android:icon="@drawable/ic_pass_card_white_24"-->
+        <!--android:title="CheckHeatHistory"/>-->
 
 </menu>

@@ -108,12 +108,14 @@ public class HomeFragment extends Fragment {
         final ParseObject log = new ParseObject("Logs");
         log.put("lat", 0);
         log.put("lon", 0);
+        Log.d("Custom HomeFrag","I know it reaches here for sure");
         mFusedLocationClient.getLastLocation()
                 .addOnSuccessListener(getActivity(), new OnSuccessListener<Location>() {
                     @Override
                     public void onSuccess(Location location) {
-
+                        Log.d("Custom HomeFrag","But does it reach here?");
                         if (location != null) {
+                            Log.d("Custom HomeFrag","Or here?");
                             log.put("lat", location.getLatitude());
                             log.put("lon", location.getLongitude());
                         }

@@ -55,11 +55,12 @@ public class MapViewFragment extends Fragment {
 
         mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
-            public void onMapReady(GoogleMap mMap) {
-
+            public void onMapReady(final GoogleMap mMap) {
+                Log.d("MapView custom message","I am here");
                 googleMap = mMap;
                 if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
                         == PackageManager.PERMISSION_GRANTED) {
+
                     googleMap.setMyLocationEnabled(true);
 
                 }
@@ -74,15 +75,18 @@ public class MapViewFragment extends Fragment {
                 query.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> logList, ParseException e) {
-
+                        Log.d("MapView custom message","Inside Level 1");
                         if (e == null) {
 
                             LatLngBounds.Builder builder = new LatLngBounds.Builder();
-
+                            Log.d("MapView custom message","Checking if the null condition passes");
+                            Log.d("MapView custom message","Let's print the log list size "+logList.size());
                             for (int i=0; i<logList.size(); i++) {
+                                Log.d("MapView custom message","Inside Level 2");
                                 LatLng pos = new LatLng(logList.get(i).getDouble("lat"), logList.get(i).getDouble("lon"));
                                 latlonList.add(pos);
                                 builder.include(pos);
+                                Log.d("Custom Map Lat Long","Lat: "+logList.get(i).getDouble("lat")+" Long: "+logList.get(i).getDouble("lon"));
                                 String dateString = logList.get(i).getString("time") + " " + logList.get(i).getString("date");
 
                                 Marker marker = googleMap.addMarker(new MarkerOptions().position(pos).title(logList.get(i).getString("activity")).snippet(dateString));
@@ -91,7 +95,7 @@ public class MapViewFragment extends Fragment {
 
                             if (logList.size() > 0) {
                                 //Toast.makeText(getActivity(), String.valueOf(logList.size()), Toast.LENGTH_LONG).show();
-
+                                Log.d("MapView custom message","Inside Level 3");
                                 Polyline polyline1 = googleMap.addPolyline(new PolylineOptions().addAll(latlonList));
 
                                 LatLngBounds bounds = builder.build();
@@ -107,6 +111,7 @@ public class MapViewFragment extends Fragment {
 
 
                         } else {
+                            Log.d("MapView custom message","Inside Level 4");
                             Toast.makeText(getActivity(), "Network Error", Toast.LENGTH_LONG).show();
                         }
                     }

@@ -37,6 +37,7 @@ public class ListFragment extends Fragment implements View.OnClickListener{
         final LogAdapter adapter = new LogAdapter(getActivity(), new ArrayList<ParseObject>());
         mListView.setAdapter(adapter);
 
+
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Logs");
         //query.whereEqualTo("user", ParseUser.getCurrentUser().getUsername());
         query.fromLocalDatastore();
@@ -48,6 +49,7 @@ public class ListFragment extends Fragment implements View.OnClickListener{
             @Override
             public void done(List<ParseObject> logList, ParseException e) {
                 if (e == null) {
+                    Log.d("Custom ListFragment","logList size here "+logList.size());
                     adapter.clear();
                     adapter.addAll(logList);
                 }
