@@ -1,4 +1,5 @@
 # ActivityLog-Android
+![alt text](https://github.com/Resilience-ASU/ActivityLog-Android/blob/master/Images/Group.png)
 
 # Introduction
 ActivityLog is a general mobile phone application that helps urban climate researchers and social scientists study spatio-temporal dynamics of human interaction with urban environment. Data collected through ActivityLog are timestamped, geo-referenced, and easily paired up with air temperature and relative humidity sensors such as Kestrel Drop (a portable Bluetooth enabled environmental data logger). Specifically, ActivityLog - HeatMappers is designed to support the development of HeatMappers citizen science project, which utilizes to understand the heat vulnerable population in Maricopa County, Arizona. 
